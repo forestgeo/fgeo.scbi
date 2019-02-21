@@ -32,6 +32,21 @@ devtools::install_github("forestgeo/fgeo.scbi")
 
 ## Example
 
-Access data stored at https://doi.org/10.5061/dryad.6nc8c
+Access data from dryad (https://doi.org/10.5061/dryad.6nc8c).
 
 ![](https://i.imgur.com/cwQzCeY.gif)
+
+Access data from the [public data portal on GitHub](https://github.com/SCBI-ForestGEO/SCBI-ForestGEO-Data).
+
+```{r, warning=FALSE, message=FALSE}
+library(purrr)
+
+github_path <- 
+  "SCBI-ForestGEO/SCBI-ForestGEO-Data/tree_main_census/data/census-csv-files"
+
+download_urls <- ghr::ghr_ls_download_url(github_path)
+download_urls %>% 
+  purrr::map(readr::read_csv) %>% 
+  purrr::set_names(fs::path_file(download_urls))
+```
+
