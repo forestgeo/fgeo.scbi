@@ -1,7 +1,10 @@
 #' Read files stored in dryad or find their download URLs.
 #'
+#' @param doi A character string giving a valid dryad doi, such as
+#'   "'10.5061/dryad.6nc8c'".
 #' @param dryad_url A character string. The output of `rdryad::dryad_files()`.
 #' @inheritParams fs::dir_ls
+#' @inheritParams base::grep
 #'
 #' @return When run interactively, both functions ask you to select files.
 #'   * `dryad_list_csv()` outputs a list with the selected files.
@@ -52,7 +55,7 @@ dryad_select_url <- function(dryad_url,
     return(dryad_url[pick][[1]])
   }
 
-  selected <- select.list(
+  selected <- utils::select.list(
     files[pick],
     multiple = TRUE,
     title = "Which files do you want?"

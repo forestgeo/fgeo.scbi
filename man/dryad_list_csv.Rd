@@ -12,9 +12,15 @@ dryad_select_url(dryad_url, regexp = NULL, invert = FALSE,
   ignore.case = TRUE)
 }
 \arguments{
+\item{doi}{A character string giving a valid dryad doi, such as
+"'10.5061/dryad.6nc8c'".}
+
 \item{regexp}{A regular expression (e.g. \code{[.]csv$}) passed on to \code{\link[=grep]{grep()}} to filter paths.}
 
 \item{invert}{If \code{TRUE} return files which do \emph{not} match}
+
+\item{ignore.case}{if \code{FALSE}, the pattern matching is \emph{case
+      sensitive} and if \code{TRUE}, case is ignored during matching.}
 
 \item{dryad_url}{A character string. The output of \code{rdryad::dryad_files()}.}
 }
