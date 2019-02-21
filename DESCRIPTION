@@ -35,3 +35,5 @@ Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
+Remotes:  
+    maurolepore/ghr
