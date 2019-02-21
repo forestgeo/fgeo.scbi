@@ -7,12 +7,25 @@ Authors@R:
              role = c("aut", "ctr", "cre"),
              email = "leporem@si.edu",
              comment = c(ORCID = "0000-0002-1986-7988")),
+      person(given = "Kristina",
+             family = "Teixeira",
+             role = c("aut", "rev"),
+             email = "TeixeiraK@si.edu"),
       person(given = "CTFS-ForestGEO",
              role = "cph",
              email = "ForestGEO@si.edu"))
 Description: What the package does (one paragraph).
 License: GPL-3
-Encoding: UTF-8
-LazyData: true
 URL: https://github.com/forestgeo/fgeo.scbi
 BugReports: https://github.com/forestgeo/fgeo.scbi/issues
+Depends:
+    R (>= 3.2)
+Suggests: 
+    covr,
+    testthat,
+    spelling
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+Language: en-US
