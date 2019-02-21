@@ -1,5 +1,5 @@
 Package: fgeo.scbi
-Title: What the Package Does (One Line, Title Case)
+Title: Access SCBI Data
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Mauro",
@@ -14,7 +14,7 @@ Authors@R:
       person(given = "CTFS-ForestGEO",
              role = "cph",
              email = "ForestGEO@si.edu"))
-Description: What the package does (one paragraph).
+Description: Access SCBI data.
 License: GPL-3
 URL: https://github.com/forestgeo/fgeo.scbi
 BugReports: https://github.com/forestgeo/fgeo.scbi/issues
