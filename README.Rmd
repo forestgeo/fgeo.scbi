@@ -32,4 +32,6 @@ devtools::install_github("forestgeo/fgeo.scbi")
 
 ## Example
 
+Access data stored at https://doi.org/10.5061/dryad.6nc8c
+
 ![](https://i.imgur.com/cwQzCeY.gif)
