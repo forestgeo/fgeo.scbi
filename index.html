@@ -96,109 +96,109 @@
 <a class="sourceLine" id="cb2-7" data-line-number="7">download_urls <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb2-8" data-line-number="8"><span class="st">  </span>purrr<span class="op">::</span><span class="kw"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span>(readr<span class="op">::</span>read_csv) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb2-9" data-line-number="9"><span class="st">  </span>purrr<span class="op">::</span><span class="kw"><a href="https://purrr.tidyverse.org/reference/set_names.html">set_names</a></span>(fs<span class="op">::</span><span class="kw"><a href="http://fs.r-lib.org/reference/path_file.html">path_file</a></span>(download_urls))</a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; $census3_coord_local_plot.csv</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; # A tibble: 55,295 x 9</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;    treeid stemid   tag stemtag quadratname    qx    qy    px    py</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  1      1      1 10079       1         104   3.7  13     3.7  73  </span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  2      2      2 10168       1         103  17.3  18.9  17.3  58.9</span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;  3      3      3 10567       1         110   9    17.1   9   197. </span></a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt;  4      4      4 12165       1         122  14.2   8.5  14.2 428. </span></a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt;  5      5      5 12190       1         122   9.4  16.4   9.4 436. </span></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt;  6      6      6 12192       1         122   1.3  14     1.3 434  </span></a>
-<a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co">#&gt;  7      7      7 12212       1         123  17.8   7.1  17.8 447. </span></a>
-<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt;  8      8      8 12261       1         125  18     3.7  18   484. </span></a>
-<a class="sourceLine" id="cb2-22" data-line-number="22"><span class="co">#&gt;  9      9      9 12456       1         130  18    17.8  18   598. </span></a>
-<a class="sourceLine" id="cb2-23" data-line-number="23"><span class="co">#&gt; 10     10     10 12551       1         132   5.6   7.7   5.6 628. </span></a>
-<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt; # … with 55,285 more rows</span></a>
-<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb2-26" data-line-number="26"><span class="co">#&gt; $scbi.full1.csv</span></a>
-<a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt; # A tibble: 40,283 x 20</span></a>
-<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt;    treeID stemID   tag StemTag sp    quadrat    gx    gy DBHID CensusID</span></a>
-<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;  1      1      1 10079       1 libe  0104     3.70  73       1        1</span></a>
-<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;  2      2      2 10168       1 libe  0103    17.3   58.9     3        1</span></a>
-<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  3      3      3 10567       1 libe  0110     9    197.      5        1</span></a>
-<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  4      4      4 12165       1 nysy  0122    14.2  428.      7        1</span></a>
-<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  5      5      5 12190       1 havi  0122     9.40 436.      9        1</span></a>
-<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  6      6      6 12192       1 havi  0122     1.30 434      13        1</span></a>
-<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt;  7      7      7 12212       1 unk   0123    17.8  447.     15        1</span></a>
-<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt;  8      8      8 12261       1 libe  0125    18    484.     17        1</span></a>
-<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt;  9      9      9 12456       1 vipr  0130    18    598.     19        1</span></a>
-<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; 10     10     10 12551       1 astr  0132     5.60 628.     22        1</span></a>
-<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; # … with 40,273 more rows, and 10 more variables: dbh &lt;dbl&gt;, pom &lt;dbl&gt;,</span></a>
-<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; #   hom &lt;dbl&gt;, ExactDate &lt;date&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-42" data-line-number="42"><span class="co">#&gt; #   nostems &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;, agb &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-43" data-line-number="43"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb2-44" data-line-number="44"><span class="co">#&gt; $scbi.full2.csv</span></a>
-<a class="sourceLine" id="cb2-45" data-line-number="45"><span class="co">#&gt; # A tibble: 40,283 x 20</span></a>
-<a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt;    treeID stemID   tag StemTag sp    quadrat    gx    gy DBHID CensusID</span></a>
-<a class="sourceLine" id="cb2-47" data-line-number="47"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-48" data-line-number="48"><span class="co">#&gt;  1      1      1 10079       1 libe  0104     3.70  73   41801        2</span></a>
-<a class="sourceLine" id="cb2-49" data-line-number="49"><span class="co">#&gt;  2      2      2 10168       1 libe  0103    17.3   58.9 41723        2</span></a>
-<a class="sourceLine" id="cb2-50" data-line-number="50"><span class="co">#&gt;  3      3      3 10567       1 libe  0110     9    197.  42501        2</span></a>
-<a class="sourceLine" id="cb2-51" data-line-number="51"><span class="co">#&gt;  4      4      4 12165       1 nysy  0122    14.2  428.  42869        2</span></a>
-<a class="sourceLine" id="cb2-52" data-line-number="52"><span class="co">#&gt;  5      5      5 12190       1 havi  0122     9.40 436.  42904        2</span></a>
-<a class="sourceLine" id="cb2-53" data-line-number="53"><span class="co">#&gt;  6      6      6 12192       1 havi  0122     1.30 434   42909        2</span></a>
-<a class="sourceLine" id="cb2-54" data-line-number="54"><span class="co">#&gt;  7      7  31200 12212       2 unk   0123    17.8  447.  42946        2</span></a>
-<a class="sourceLine" id="cb2-55" data-line-number="55"><span class="co">#&gt;  8      8  31201 12261       2 libe  0125    18    484.  43023        2</span></a>
-<a class="sourceLine" id="cb2-56" data-line-number="56"><span class="co">#&gt;  9      9  31202 12456       2 vipr  0130    18    598.  43249        2</span></a>
-<a class="sourceLine" id="cb2-57" data-line-number="57"><span class="co">#&gt; 10     10     10 12551       1 astr  0132     5.60 628.  43346        2</span></a>
-<a class="sourceLine" id="cb2-58" data-line-number="58"><span class="co">#&gt; # … with 40,273 more rows, and 10 more variables: dbh &lt;dbl&gt;, pom &lt;dbl&gt;,</span></a>
-<a class="sourceLine" id="cb2-59" data-line-number="59"><span class="co">#&gt; #   hom &lt;dbl&gt;, ExactDate &lt;date&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-60" data-line-number="60"><span class="co">#&gt; #   nostems &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;, agb &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; $scbi.full1.csv</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; # A tibble: 40,283 x 20</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;    treeID stemID   tag StemTag sp    quadrat    gx    gy DBHID CensusID</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  1      1      1 10079       1 libe  0104     3.70  73       1        1</span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  2      2      2 10168       1 libe  0103    17.3   58.9     3        1</span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;  3      3      3 10567       1 libe  0110     9    197.      5        1</span></a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt;  4      4      4 12165       1 nysy  0122    14.2  428.      7        1</span></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt;  5      5      5 12190       1 havi  0122     9.40 436.      9        1</span></a>
+<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt;  6      6      6 12192       1 havi  0122     1.30 434      13        1</span></a>
+<a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co">#&gt;  7      7      7 12212       1 unk   0123    17.8  447.     15        1</span></a>
+<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt;  8      8      8 12261       1 libe  0125    18    484.     17        1</span></a>
+<a class="sourceLine" id="cb2-22" data-line-number="22"><span class="co">#&gt;  9      9      9 12456       1 vipr  0130    18    598.     19        1</span></a>
+<a class="sourceLine" id="cb2-23" data-line-number="23"><span class="co">#&gt; 10     10     10 12551       1 astr  0132     5.60 628.     22        1</span></a>
+<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt; # … with 40,273 more rows, and 10 more variables: dbh &lt;dbl&gt;, pom &lt;dbl&gt;,</span></a>
+<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; #   hom &lt;dbl&gt;, ExactDate &lt;date&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-26" data-line-number="26"><span class="co">#&gt; #   nostems &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;, agb &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt; $scbi.full2.csv</span></a>
+<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt; # A tibble: 40,283 x 20</span></a>
+<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;    treeID stemID   tag StemTag sp    quadrat    gx    gy DBHID CensusID</span></a>
+<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  1      1      1 10079       1 libe  0104     3.70  73   41801        2</span></a>
+<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  2      2      2 10168       1 libe  0103    17.3   58.9 41723        2</span></a>
+<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  3      3      3 10567       1 libe  0110     9    197.  42501        2</span></a>
+<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  4      4      4 12165       1 nysy  0122    14.2  428.  42869        2</span></a>
+<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt;  5      5      5 12190       1 havi  0122     9.40 436.  42904        2</span></a>
+<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt;  6      6      6 12192       1 havi  0122     1.30 434   42909        2</span></a>
+<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt;  7      7  31200 12212       2 unk   0123    17.8  447.  42946        2</span></a>
+<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt;  8      8  31201 12261       2 libe  0125    18    484.  43023        2</span></a>
+<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt;  9      9  31202 12456       2 vipr  0130    18    598.  43249        2</span></a>
+<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; 10     10     10 12551       1 astr  0132     5.60 628.  43346        2</span></a>
+<a class="sourceLine" id="cb2-42" data-line-number="42"><span class="co">#&gt; # … with 40,273 more rows, and 10 more variables: dbh &lt;dbl&gt;, pom &lt;dbl&gt;,</span></a>
+<a class="sourceLine" id="cb2-43" data-line-number="43"><span class="co">#&gt; #   hom &lt;dbl&gt;, ExactDate &lt;date&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-44" data-line-number="44"><span class="co">#&gt; #   nostems &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;, agb &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-45" data-line-number="45"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt; $scbi.spptable.csv</span></a>
+<a class="sourceLine" id="cb2-47" data-line-number="47"><span class="co">#&gt; # A tibble: 73 x 10</span></a>
+<a class="sourceLine" id="cb2-48" data-line-number="48"><span class="co">#&gt;    sp    Latin Genus Species Family SpeciesID Authority IDLevel syn   subsp</span></a>
+<a class="sourceLine" id="cb2-49" data-line-number="49"><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;   &lt;lgl&gt; &lt;lgl&gt;</span></a>
+<a class="sourceLine" id="cb2-50" data-line-number="50"><span class="co">#&gt;  1 acne  Acer… Acer  negundo Sapin…         1 &lt;NA&gt;      species NA    NA   </span></a>
+<a class="sourceLine" id="cb2-51" data-line-number="51"><span class="co">#&gt;  2 acpl  Acer… Acer  platan… Sapin…         2 &lt;NA&gt;      species NA    NA   </span></a>
+<a class="sourceLine" id="cb2-52" data-line-number="52"><span class="co">#&gt;  3 acru  Acer… Acer  rubrum  Sapin…         3 &lt;NA&gt;      species NA    NA   </span></a>
+<a class="sourceLine" id="cb2-53" data-line-number="53"><span class="co">#&gt;  4 acsp  Acer… Acer  sp      Sapin…         4 &lt;NA&gt;      Multip… NA    NA   </span></a>
+<a class="sourceLine" id="cb2-54" data-line-number="54"><span class="co">#&gt;  5 aial  Aila… Aila… altiss… Simar…         5 &lt;NA&gt;      species NA    NA   </span></a>
+<a class="sourceLine" id="cb2-55" data-line-number="55"><span class="co">#&gt;  6 amar  Amel… Amel… arborea Rosac…         6 &lt;NA&gt;      species NA    NA   </span></a>
+<a class="sourceLine" id="cb2-56" data-line-number="56"><span class="co">#&gt;  7 astr  Asim… Asim… triloba Annon…         7 &lt;NA&gt;      species NA    NA   </span></a>
+<a class="sourceLine" id="cb2-57" data-line-number="57"><span class="co">#&gt;  8 beth  Berb… Berb… thunbe… Berbe…         8 &lt;NA&gt;      species NA    NA   </span></a>
+<a class="sourceLine" id="cb2-58" data-line-number="58"><span class="co">#&gt;  9 caca  Carp… Carp… caroli… Betul…         9 &lt;NA&gt;      species NA    NA   </span></a>
+<a class="sourceLine" id="cb2-59" data-line-number="59"><span class="co">#&gt; 10 caco  Cary… Carya cordif… Jugla…        10 &lt;NA&gt;      species NA    NA   </span></a>
+<a class="sourceLine" id="cb2-60" data-line-number="60"><span class="co">#&gt; # … with 63 more rows</span></a>
 <a class="sourceLine" id="cb2-61" data-line-number="61"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb2-62" data-line-number="62"><span class="co">#&gt; $scbi.spptable.csv</span></a>
-<a class="sourceLine" id="cb2-63" data-line-number="63"><span class="co">#&gt; # A tibble: 73 x 10</span></a>
-<a class="sourceLine" id="cb2-64" data-line-number="64"><span class="co">#&gt;    sp    Latin Genus Species Family SpeciesID Authority IDLevel syn   subsp</span></a>
-<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;   &lt;lgl&gt; &lt;lgl&gt;</span></a>
-<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt;  1 acne  Acer… Acer  negundo Sapin…         1 &lt;NA&gt;      species NA    NA   </span></a>
-<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt;  2 acpl  Acer… Acer  platan… Sapin…         2 &lt;NA&gt;      species NA    NA   </span></a>
-<a class="sourceLine" id="cb2-68" data-line-number="68"><span class="co">#&gt;  3 acru  Acer… Acer  rubrum  Sapin…         3 &lt;NA&gt;      species NA    NA   </span></a>
-<a class="sourceLine" id="cb2-69" data-line-number="69"><span class="co">#&gt;  4 acsp  Acer… Acer  sp      Sapin…         4 &lt;NA&gt;      Multip… NA    NA   </span></a>
-<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt;  5 aial  Aila… Aila… altiss… Simar…         5 &lt;NA&gt;      species NA    NA   </span></a>
-<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt;  6 amar  Amel… Amel… arborea Rosac…         6 &lt;NA&gt;      species NA    NA   </span></a>
-<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt;  7 astr  Asim… Asim… triloba Annon…         7 &lt;NA&gt;      species NA    NA   </span></a>
-<a class="sourceLine" id="cb2-73" data-line-number="73"><span class="co">#&gt;  8 beth  Berb… Berb… thunbe… Berbe…         8 &lt;NA&gt;      species NA    NA   </span></a>
-<a class="sourceLine" id="cb2-74" data-line-number="74"><span class="co">#&gt;  9 caca  Carp… Carp… caroli… Betul…         9 &lt;NA&gt;      species NA    NA   </span></a>
-<a class="sourceLine" id="cb2-75" data-line-number="75"><span class="co">#&gt; 10 caco  Cary… Carya cordif… Jugla…        10 &lt;NA&gt;      species NA    NA   </span></a>
-<a class="sourceLine" id="cb2-76" data-line-number="76"><span class="co">#&gt; # … with 63 more rows</span></a>
-<a class="sourceLine" id="cb2-77" data-line-number="77"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb2-78" data-line-number="78"><span class="co">#&gt; $scbi.stem1.csv</span></a>
-<a class="sourceLine" id="cb2-79" data-line-number="79"><span class="co">#&gt; # A tibble: 55,295 x 20</span></a>
-<a class="sourceLine" id="cb2-80" data-line-number="80"><span class="co">#&gt;    treeID stemID   tag StemTag sp    quadrat    gx    gy DBHID CensusID</span></a>
-<a class="sourceLine" id="cb2-81" data-line-number="81"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-82" data-line-number="82"><span class="co">#&gt;  1      1      1 10079       1 libe  0104     3.70  73       1        1</span></a>
-<a class="sourceLine" id="cb2-83" data-line-number="83"><span class="co">#&gt;  2      1  31194 10079       2 libe  0104     3.70  73       2        1</span></a>
-<a class="sourceLine" id="cb2-84" data-line-number="84"><span class="co">#&gt;  3      2      2 10168       1 libe  0103    17.3   58.9     3        1</span></a>
-<a class="sourceLine" id="cb2-85" data-line-number="85"><span class="co">#&gt;  4      2  31195 10168       2 libe  0103    17.3   58.9     4        1</span></a>
-<a class="sourceLine" id="cb2-86" data-line-number="86"><span class="co">#&gt;  5      3      3 10567       1 libe  0110     9    197.      5        1</span></a>
-<a class="sourceLine" id="cb2-87" data-line-number="87"><span class="co">#&gt;  6      3  31196 10567       2 libe  0110     9    197.      6        1</span></a>
-<a class="sourceLine" id="cb2-88" data-line-number="88"><span class="co">#&gt;  7      3  40394 10567       3 libe  0110     9    197.     NA       NA</span></a>
-<a class="sourceLine" id="cb2-89" data-line-number="89"><span class="co">#&gt;  8      4      4 12165       1 nysy  0122    14.2  428.      7        1</span></a>
-<a class="sourceLine" id="cb2-90" data-line-number="90"><span class="co">#&gt;  9      4  31197 12165       2 nysy  0122    14.2  428.      8        1</span></a>
-<a class="sourceLine" id="cb2-91" data-line-number="91"><span class="co">#&gt; 10      5      5 12190       1 havi  0122     9.40 436.      9        1</span></a>
-<a class="sourceLine" id="cb2-92" data-line-number="92"><span class="co">#&gt; # … with 55,285 more rows, and 10 more variables: dbh &lt;dbl&gt;, pom &lt;dbl&gt;,</span></a>
-<a class="sourceLine" id="cb2-93" data-line-number="93"><span class="co">#&gt; #   hom &lt;dbl&gt;, ExactDate &lt;date&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-94" data-line-number="94"><span class="co">#&gt; #   countPOM &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;, agb &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-95" data-line-number="95"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb2-96" data-line-number="96"><span class="co">#&gt; $scbi.stem2.csv</span></a>
-<a class="sourceLine" id="cb2-97" data-line-number="97"><span class="co">#&gt; # A tibble: 55,295 x 20</span></a>
-<a class="sourceLine" id="cb2-98" data-line-number="98"><span class="co">#&gt;    treeID stemID   tag StemTag sp    quadrat    gx    gy DBHID CensusID</span></a>
-<a class="sourceLine" id="cb2-99" data-line-number="99"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-100" data-line-number="100"><span class="co">#&gt;  1      1      1 10079       1 libe  0104     3.70  73   41801        2</span></a>
-<a class="sourceLine" id="cb2-101" data-line-number="101"><span class="co">#&gt;  2      1  31194 10079       2 libe  0104     3.70  73   41802        2</span></a>
-<a class="sourceLine" id="cb2-102" data-line-number="102"><span class="co">#&gt;  3      2      2 10168       1 libe  0103    17.3   58.9 41723        2</span></a>
-<a class="sourceLine" id="cb2-103" data-line-number="103"><span class="co">#&gt;  4      2  31195 10168       2 libe  0103    17.3   58.9 41724        2</span></a>
-<a class="sourceLine" id="cb2-104" data-line-number="104"><span class="co">#&gt;  5      3      3 10567       1 libe  0110     9    197.  42501        2</span></a>
-<a class="sourceLine" id="cb2-105" data-line-number="105"><span class="co">#&gt;  6      3  31196 10567       2 libe  0110     9    197.  42502        2</span></a>
-<a class="sourceLine" id="cb2-106" data-line-number="106"><span class="co">#&gt;  7      3  40394 10567       3 libe  0110     9    197.  80573        2</span></a>
-<a class="sourceLine" id="cb2-107" data-line-number="107"><span class="co">#&gt;  8      4      4 12165       1 nysy  0122    14.2  428.  42869        2</span></a>
-<a class="sourceLine" id="cb2-108" data-line-number="108"><span class="co">#&gt;  9      4  31197 12165       2 nysy  0122    14.2  428.  42870        2</span></a>
-<a class="sourceLine" id="cb2-109" data-line-number="109"><span class="co">#&gt; 10      5      5 12190       1 havi  0122     9.40 436.  42904        2</span></a>
-<a class="sourceLine" id="cb2-110" data-line-number="110"><span class="co">#&gt; # … with 55,285 more rows, and 10 more variables: dbh &lt;dbl&gt;, pom &lt;dbl&gt;,</span></a>
-<a class="sourceLine" id="cb2-111" data-line-number="111"><span class="co">#&gt; #   hom &lt;dbl&gt;, ExactDate &lt;date&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-112" data-line-number="112"><span class="co">#&gt; #   countPOM &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;, agb &lt;dbl&gt;</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-62" data-line-number="62"><span class="co">#&gt; $scbi.stem1.csv</span></a>
+<a class="sourceLine" id="cb2-63" data-line-number="63"><span class="co">#&gt; # A tibble: 55,295 x 20</span></a>
+<a class="sourceLine" id="cb2-64" data-line-number="64"><span class="co">#&gt;    treeID stemID   tag StemTag sp    quadrat    gx    gy DBHID CensusID</span></a>
+<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt;  1      1      1 10079       1 libe  0104     3.70  73       1        1</span></a>
+<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt;  2      1  31194 10079       2 libe  0104     3.70  73       2        1</span></a>
+<a class="sourceLine" id="cb2-68" data-line-number="68"><span class="co">#&gt;  3      2      2 10168       1 libe  0103    17.3   58.9     3        1</span></a>
+<a class="sourceLine" id="cb2-69" data-line-number="69"><span class="co">#&gt;  4      2  31195 10168       2 libe  0103    17.3   58.9     4        1</span></a>
+<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt;  5      3      3 10567       1 libe  0110     9    197.      5        1</span></a>
+<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt;  6      3  31196 10567       2 libe  0110     9    197.      6        1</span></a>
+<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt;  7      3  40394 10567       3 libe  0110     9    197.     NA       NA</span></a>
+<a class="sourceLine" id="cb2-73" data-line-number="73"><span class="co">#&gt;  8      4      4 12165       1 nysy  0122    14.2  428.      7        1</span></a>
+<a class="sourceLine" id="cb2-74" data-line-number="74"><span class="co">#&gt;  9      4  31197 12165       2 nysy  0122    14.2  428.      8        1</span></a>
+<a class="sourceLine" id="cb2-75" data-line-number="75"><span class="co">#&gt; 10      5      5 12190       1 havi  0122     9.40 436.      9        1</span></a>
+<a class="sourceLine" id="cb2-76" data-line-number="76"><span class="co">#&gt; # … with 55,285 more rows, and 10 more variables: dbh &lt;dbl&gt;, pom &lt;dbl&gt;,</span></a>
+<a class="sourceLine" id="cb2-77" data-line-number="77"><span class="co">#&gt; #   hom &lt;dbl&gt;, ExactDate &lt;date&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-78" data-line-number="78"><span class="co">#&gt; #   countPOM &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;, agb &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-79" data-line-number="79"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb2-80" data-line-number="80"><span class="co">#&gt; $scbi.stem2.csv</span></a>
+<a class="sourceLine" id="cb2-81" data-line-number="81"><span class="co">#&gt; # A tibble: 55,295 x 20</span></a>
+<a class="sourceLine" id="cb2-82" data-line-number="82"><span class="co">#&gt;    treeID stemID   tag StemTag sp    quadrat    gx    gy DBHID CensusID</span></a>
+<a class="sourceLine" id="cb2-83" data-line-number="83"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-84" data-line-number="84"><span class="co">#&gt;  1      1      1 10079       1 libe  0104     3.70  73   41801        2</span></a>
+<a class="sourceLine" id="cb2-85" data-line-number="85"><span class="co">#&gt;  2      1  31194 10079       2 libe  0104     3.70  73   41802        2</span></a>
+<a class="sourceLine" id="cb2-86" data-line-number="86"><span class="co">#&gt;  3      2      2 10168       1 libe  0103    17.3   58.9 41723        2</span></a>
+<a class="sourceLine" id="cb2-87" data-line-number="87"><span class="co">#&gt;  4      2  31195 10168       2 libe  0103    17.3   58.9 41724        2</span></a>
+<a class="sourceLine" id="cb2-88" data-line-number="88"><span class="co">#&gt;  5      3      3 10567       1 libe  0110     9    197.  42501        2</span></a>
+<a class="sourceLine" id="cb2-89" data-line-number="89"><span class="co">#&gt;  6      3  31196 10567       2 libe  0110     9    197.  42502        2</span></a>
+<a class="sourceLine" id="cb2-90" data-line-number="90"><span class="co">#&gt;  7      3  40394 10567       3 libe  0110     9    197.  80573        2</span></a>
+<a class="sourceLine" id="cb2-91" data-line-number="91"><span class="co">#&gt;  8      4      4 12165       1 nysy  0122    14.2  428.  42869        2</span></a>
+<a class="sourceLine" id="cb2-92" data-line-number="92"><span class="co">#&gt;  9      4  31197 12165       2 nysy  0122    14.2  428.  42870        2</span></a>
+<a class="sourceLine" id="cb2-93" data-line-number="93"><span class="co">#&gt; 10      5      5 12190       1 havi  0122     9.40 436.  42904        2</span></a>
+<a class="sourceLine" id="cb2-94" data-line-number="94"><span class="co">#&gt; # … with 55,285 more rows, and 10 more variables: dbh &lt;dbl&gt;, pom &lt;dbl&gt;,</span></a>
+<a class="sourceLine" id="cb2-95" data-line-number="95"><span class="co">#&gt; #   hom &lt;dbl&gt;, ExactDate &lt;date&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-96" data-line-number="96"><span class="co">#&gt; #   countPOM &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;, agb &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-97" data-line-number="97"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb2-98" data-line-number="98"><span class="co">#&gt; $tree_coord_local_plot.csv</span></a>
+<a class="sourceLine" id="cb2-99" data-line-number="99"><span class="co">#&gt; # A tibble: 55,295 x 9</span></a>
+<a class="sourceLine" id="cb2-100" data-line-number="100"><span class="co">#&gt;    treeid stemid   tag stemtag quadratname    qx    qy    px    py</span></a>
+<a class="sourceLine" id="cb2-101" data-line-number="101"><span class="co">#&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb2-102" data-line-number="102"><span class="co">#&gt;  1      1      1 10079       1         104   3.7  13     3.7  73  </span></a>
+<a class="sourceLine" id="cb2-103" data-line-number="103"><span class="co">#&gt;  2      2      2 10168       1         103  17.3  18.9  17.3  58.9</span></a>
+<a class="sourceLine" id="cb2-104" data-line-number="104"><span class="co">#&gt;  3      3      3 10567       1         110   9    17.1   9   197. </span></a>
+<a class="sourceLine" id="cb2-105" data-line-number="105"><span class="co">#&gt;  4      4      4 12165       1         122  14.2   8.5  14.2 428. </span></a>
+<a class="sourceLine" id="cb2-106" data-line-number="106"><span class="co">#&gt;  5      5      5 12190       1         122   9.4  16.4   9.4 436. </span></a>
+<a class="sourceLine" id="cb2-107" data-line-number="107"><span class="co">#&gt;  6      6      6 12192       1         122   1.3  14     1.3 434  </span></a>
+<a class="sourceLine" id="cb2-108" data-line-number="108"><span class="co">#&gt;  7      7      7 12212       1         123  17.8   7.1  17.8 447. </span></a>
+<a class="sourceLine" id="cb2-109" data-line-number="109"><span class="co">#&gt;  8      8      8 12261       1         125  18     3.7  18   484. </span></a>
+<a class="sourceLine" id="cb2-110" data-line-number="110"><span class="co">#&gt;  9      9      9 12456       1         130  18    17.8  18   598. </span></a>
+<a class="sourceLine" id="cb2-111" data-line-number="111"><span class="co">#&gt; 10     10     10 12551       1         132   5.6   7.7   5.6 628. </span></a>
+<a class="sourceLine" id="cb2-112" data-line-number="112"><span class="co">#&gt; # … with 55,285 more rows</span></a></code></pre></div>
 </div>
 </div>
   </div>
